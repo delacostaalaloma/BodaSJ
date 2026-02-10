@@ -218,7 +218,8 @@ let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74
 
 if(nombre){
   document.getElementById('rsvpBtn').href =
-    formBase + "?entry.1999824820=" + nombre.replace(/_/g,' ');
+    "?entry.1999824820=" + encodeURIComponent(invitado.nombre) +
+    "&entry.2084982047=" + invitado.cupos;
 }else{
   document.getElementById('rsvpBtn').href = formBase;
 }
@@ -228,6 +229,7 @@ if(nombre){
 </body>
 
 </html>
+
 
 
 
