@@ -186,13 +186,21 @@ const token = params.get('code');
 fetch('invitados.json')
 .then(r => r.json())
 .then(data => {
-  if(!data[token]){
-    document.body.innerHTML = "<h1>Invitación no válida</h1>";
+
+  if(!token || !data[token]){
+    document.body.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;text-align:center;">
+        <div>
+          <h1>Invitación no válida</h1>
+          <p>Este acceso no está autorizado.</p>
+        </div>
+      </div>`;
     return;
   }
 
   const invitado = data[token];
 
+  // Render
   document.getElementById('nombre').innerText = invitado.nombre;
   document.getElementById('cupos').innerText = `Cupos asignados: ${invitado.cupos} personas`;
 
@@ -227,6 +235,7 @@ let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74
 </body>
 
 </html>
+
 
 
 
