@@ -201,9 +201,6 @@ setInterval(()=>{
   document.getElementById('s').innerText = s;
 },1000);
 
-const params = new URLSearchParams(window.location.search);
-const nombre = params.get('nombre');
-
 let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74xoHiW91AjYUPLaNXGT51dchTPw/viewform";
 
 if(nombre){
@@ -218,6 +215,7 @@ if(nombre){
 </body>
 
 </html>
+
 
 
 
