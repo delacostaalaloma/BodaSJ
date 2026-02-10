@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Links - Invitación Boda</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{
+  font-family:'Montserrat',sans-serif;
+  background:linear-gradient(135deg,#ffecd2,#fcb69f,#6ec6ff);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:100%;
+  max-width:420px;
+  box-shadow:0 20px 50px rgba(0,0,0,.2);
+  text-align:center;
+}
+
+h1{margin-bottom:10px}
+
+input{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  margin:12px 0;
+  font-size:1rem;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:none;
+  font-weight:600;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+  color:white;
+  cursor:pointer;
+}
+
+.result{
+  margin-top:15px;
+  word-break:break-all;
+  background:#f1f5f9;
+  padding:12px;
+  border-radius:10px;
+  font-size:.85rem;
+}
+
+.copy{
+  margin-top:10px;
+  background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Generador de links 💍</h1>
+  <p>Crea invitaciones personalizadas</p>
+
+  <input id="nombre" placeholder="Nombre del invitado" />
+
+  <button onclick="generar()">Generar link</button>
+
+  <div id="resultado" class="result" style="display:none"></div>
+  <button class="copy" id="copyBtn" style="display:none" onclick="copiar()">Copiar link</button>
+</div>
+
+<script>
+const baseURL = "https://tuboda.com/"; // CAMBIAR por tu dominio real
+
+function generar(){
+  const nombre = document.getElementById("nombre").value.trim();
+  if(!nombre) return alert("Ingresa un nombre");
+
+  const limpio = nombre.replace(/\s+/g,"_");
+  const link = `${baseURL}?nombre=${encodeURIComponent(limpio)}`;
+
+  const res = document.getElementById("resultado");
+  res.style.display = "block";
+  res.innerText = link;
+
+  document.getElementById("copyBtn").style.display = "block";
+}
+
+function copiar(){
+  const text = document.getElementById("resultado").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Link copiado ✅");
+}
+</script>
+
+</body>
+</html>
