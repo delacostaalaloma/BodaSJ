@@ -55,9 +55,10 @@ body {
 }
 
 h1{
-  font-family:'Playfair Display',serif;
+  font-family:'earthgate';
   font-size:3rem;
   margin:10px 0;
+  color: #283316;
 }
 
 h2{
@@ -128,10 +129,14 @@ h2{
 
 <div class="hero">
   <div class="card">
+    <br>
+    <br>
     <div class="date">15.05.2026</div>
     <h1>Juan Pablo & Stefany</h1>
 
-    <div class="quote">“Desde el mar y los atardeceres de Santa Marta 🌅 hasta la fuerza y energía de Medellín 🏔️, dos mundos se unen por amor.”</div>
+    <div class="quote">“Cuando Dios está en el centro, el amor encuentra su camino.
+    Así comenzó nuestra historia, de forma inesperada, creciendo en unión y convirtiéndose en una familia llena de amor.
+    Hoy damos el “sí” más importante de nuestras vidas.”</div>
 
     <h2>Estás invitado/a</h2>
     <div id="nombre">Invitado Especial</div>
@@ -166,7 +171,7 @@ if(nombre){
 }
 
 // Countdown
-const fechaBoda = new Date('2026-05-15T17:00:00').getTime();
+const fechaBoda = new Date('2026-05-22T17:00:00').getTime();
 setInterval(()=>{
   const ahora = new Date().getTime();
   const diff = fechaBoda - ahora;
@@ -186,5 +191,6 @@ setInterval(()=>{
 </body>
 
 </html>
+
 
 
