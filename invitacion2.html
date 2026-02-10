@@ -9,36 +9,58 @@
 <!-- OpenGraph -->
 <meta property="og:title" content="Nuestra Historia 💍">
 <meta property="og:description" content="Estás invitado/a a vivir un momento único.">
-<meta property="og:image" content="https://entreaarepacyayeye.netlify.app/imagen.jpeg">
-<meta property="og:url" content="https://entreaarepacyayeye.netlify.app/invitacion">
+<meta property="og:image" content="https://delacostaalaloma.github.io/BodaSJ/logo.jpeg">
+<meta property="og:url" content="https://delacostaalaloma.github.io/BodaSJ/invitacion2.html">
 <meta property="og:type" content="website">
 
 <style>
-body{
-  margin:0;
-  font-family:'Montserrat',sans-serif;
-  background:#f7f6f3;
-  color:#2f3e3a;
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* Fondo general en un tono crema suave que combine con las hojas */
+  background: #fdfdfb; 
+  color: #2f3e3a;
 }
 
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
-.card{
-  max-width:700px;
-  width:100%;
-  background:white;
-  border-radius:30px;
-  padding:60px 40px;
-  box-shadow:0 20px 60px rgba(0,0,0,.1);
-  position:relative;
-  overflow:hidden;
+.card {
+  max-width: 500px; /* Reducido para que parezca más una tarjeta física */
+  width: 100%;
+  border-radius: 20px;
+  padding: 80px 40px; /* Más padding arriba/abajo para no tapar las hojas */
+  box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+
+  /* AQUÍ INTEGRAMOS TU IMAGEN */
+  background-image: url('https://delacostaalaloma.github.io/BodaSJ/Tarjeta De Comunion Varon.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-color: white; /* Respaldo si falla la imagen */
+}
+
+/* Opcional: Agregar un filtro blanco semi-transparente 
+   para que el texto se lea mejor sobre la imagen */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.4); /* 40% de blanco sobre la imagen */
+  z-index: 1;
+}
+
+/* Esto asegura que el contenido esté por encima del filtro */
+.card > * {
+  position: relative;
+  z-index: 2;
 }
 
 h1{
@@ -171,4 +193,5 @@ setInterval(()=>{
 </script>
 
 </body>
+
 </html>
