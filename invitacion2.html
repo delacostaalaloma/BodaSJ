@@ -164,6 +164,12 @@ h2{
       <a href="https://www.instagram.com/cabanavillasofia_?igsh=ODBmbGg1bGN5cnJv" class="btn">📍 Ver Lugar</a>
       <a target="_blank" href="https://open.spotify.com" class="btn">🎵 Playlist de la boda</a>
       <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn">👗 Dress Code</a>
+      <a id="rsvpBtn"
+       class="btn"
+       target="_blank"
+       rel="noopener noreferrer">
+       ✅ Confirmar asistencia
+      </a>
       <a href="https://entreaarepacyayeye.netlify.app/regalos" class="btn">🎁 Regalos (QR)</a>
     </div>
       
@@ -194,11 +200,25 @@ setInterval(()=>{
   document.getElementById('m').innerText = m;
   document.getElementById('s').innerText = s;
 },1000);
+
+const params = new URLSearchParams(window.location.search);
+const nombre = params.get('nombre');
+
+let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74xoHiW91AjYUPLaNXGT51dchTPw/viewform";
+
+if(nombre){
+  document.getElementById('rsvpBtn').href =
+    formBase + "?entry.1999824820=" + nombre.replace(/_/g,' ');
+}else{
+  document.getElementById('rsvpBtn').href = formBase;
+}
+</script>
 </script>
 
 </body>
 
 </html>
+
 
 
 
