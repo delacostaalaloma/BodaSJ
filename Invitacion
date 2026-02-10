@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra Historia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Nuestra Historia 💍">
+<meta property="og:description" content="Estás invitado/a a vivir un momento único.">
+<meta property="og:image" content="https://entrearepaycayeye.netlify.app//imagen.jpeg">
+<meta property="og:url" content="https://entrearepaycayeye.netlify.app//invitacion">
+<meta property="og:type" content="website">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* Fondo general en un tono crema suave que combine con las hojas */
+  background: #fdfdfb; 
+  color: #2f3e3a;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  max-width: 500px; /* Reducido para que parezca más una tarjeta física */
+  width: 100%;
+  border-radius: 20px;
+  padding: 80px 40px; /* Más padding arriba/abajo para no tapar las hojas */
+  box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+
+  /* AQUÍ INTEGRAMOS TU IMAGEN */
+  background-image: url('https://entrearepaycayeye.netlify.app//Tarjeta De Comunion Varon.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-color: white; /* Respaldo si falla la imagen */
+}
+
+/* Opcional: Agregar un filtro blanco semi-transparente 
+   para que el texto se lea mejor sobre la imagen */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.4); /* 40% de blanco sobre la imagen */
+  z-index: 1;
+}
+
+/* Esto asegura que el contenido esté por encima del filtro */
+.card > * {
+  position: relative;
+  z-index: 2;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;
+  margin:10px 0;
+}
+
+h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;
+  margin-bottom:10px;
+}
+
+.date{
+  letter-spacing:2px;
+  margin-bottom:20px;
+  color:556b2f;
+}
+
+.quote{
+  font-style:italic;
+  margin:30px 0;
+  color:#5f7c74;
+}
+
+#nombre{
+  color:#7a9c8c;
+  font-weight:600;
+  font-size:1.3rem;
+}
+
+.section{
+  margin:35px 0;
+}
+
+.btn{
+  display:block;
+  text-decoration:none;
+  margin:12px 0;
+  padding:16px;
+  border-radius:14px;
+  font-weight:600;
+  background:#7a9c8c;
+  color:white;
+  transition:.3s;
+}
+
+.btn:hover{transform:scale(1.04)}
+
+.countdown{
+  display:flex;
+  justify-content:space-around;
+  margin-top:25px;
+}
+
+.time-box{
+  text-align:center;
+}
+
+.time-box span{
+  display:block;
+  font-size:1.4rem;
+  font-weight:700;
+}
+
+.footer{
+  margin-top:30px;
+  font-size:.8rem;
+  opacity:.6;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="card">
+    <div class="date">15.05.2026</div>
+    <h1>Juan Pablo & Stefany</h1>
+
+    <div class="quote">“Desde el mar y los atardeceres de Santa Marta 🌅 hasta la fuerza y energía de Medellín 🏔️, dos mundos se unen por amor.”</div>
+
+    <h2>Estás invitado/a</h2>
+    <div id="nombre">Invitado Especial</div>
+
+    <div class="section">
+      <h2>Cuenta regresiva</h2>
+      <div class="countdown">
+        <div class="time-box"><span id="d">0</span>días</div>
+        <div class="time-box"><span id="h">0</span>hs</div>
+        <div class="time-box"><span id="m">0</span>min</div>
+        <div class="time-box"><span id="s">0</span>seg</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <a href="https://maps.google.com" class="btn">📍 Ver ubicación</a>
+      <a href="https://open.spotify.com" class="btn">🎵 Playlist de la boda</a>
+      <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn">👗 Dress Code</a>
+      <a href="https://entreaarepacyayeye.netlify.app/regalos" class="btn">🎁 Regalos (QR)</a>
+    </div>
+
+    <div class="footer">Con amor ❤️</div>
+  </div>
+</div>
+
+<script>
+// Nombre por query
+const params = new URLSearchParams(window.location.search);
+const nombre = params.get('nombre');
+if(nombre){
+  document.getElementById('nombre').innerText = nombre.replace(/_/g,' ');
+}
+
+// Countdown
+const fechaBoda = new Date('2026-05-22T17:00:00').getTime();
+setInterval(()=>{
+  const ahora = new Date().getTime();
+  const diff = fechaBoda - ahora;
+
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
+  const m = Math.floor((diff % (1000*60*60))/(1000*60));
+  const s = Math.floor((diff % (1000*60))/1000);
+
+  document.getElementById('d').innerText = d;
+  document.getElementById('h').innerText = h;
+  document.getElementById('m').innerText = m;
+  document.getElementById('s').innerText = s;
+},1000);
+</script>
+
+</body>
+</html>
+
+
+
+
