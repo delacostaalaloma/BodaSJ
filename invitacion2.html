@@ -140,7 +140,7 @@ h2{
     <br><br>
     <br>
     <br>
-    <div class="date">15.05.2026</div>
+    <div class="date">22.05.2026</div>
     <h1>Stefa & Juanpa</h1>
 
     <div class="quote">“Cuando Dios está en el centro, el amor encuentra su camino.
@@ -195,9 +195,7 @@ fetch('invitados.json')
 
   document.getElementById('nombre').innerText = invitado.nombre;
   document.getElementById('cupos').innerText = `Cupos asignados: ${invitado.cupos} personas`;
-if(nombre){
-  document.getElementById('nombre').innerText = nombre.replace(/_/g,' ');
-}
+
 
 // Countdown
 const fechaBoda = new Date('2026-05-22T17:00:00').getTime();
@@ -230,6 +228,7 @@ if(nombre){
 </body>
 
 </html>
+
 
 
 
