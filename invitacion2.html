@@ -163,7 +163,7 @@ h2{
 
     <div class="section">
       <a href="https://www.instagram.com/cabanavillasofia_?igsh=ODBmbGg1bGN5cnJv" class="btn">📍 Ver Lugar</a>
-      <a target="_blank" href="https://open.spotify.com" class="btn">🎵 Playlist de la boda</a>
+      <a target="_blank" href="https://open.spotify.com/playlist/3CoZEC942rXGRCbBPkVsSN?si=36826c3be6ac48d7" class="btn">🎵 Playlist de la boda</a>
       <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn">👗 Dress Code</a>
       <a id="rsvpBtn"
        class="btn"
@@ -216,19 +216,18 @@ setInterval(()=>{
 
 let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74xoHiW91AjYUPLaNXGT51dchTPw/viewform";
 
-if(nombre){
-  document.getElementById('rsvpBtn').href =
+ document.getElementById('rsvpBtn').href =
+    formBase +
     "?entry.1999824820=" + encodeURIComponent(invitado.nombre) +
     "&entry.2084982047=" + invitado.cupos;
-}else{
-  document.getElementById('rsvpBtn').href = formBase;
-}
+});
 </script>
 </script>
 
 </body>
 
 </html>
+
 
 
 
