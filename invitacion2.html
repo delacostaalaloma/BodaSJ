@@ -182,15 +182,12 @@ h2{
 
 .grid-2{
     display:grid;
-    grid-template-columns: 1fr 1fr;  /* 2 columnas */
+    grid-template-columns: 1fr 1fr;
     gap:16px;
 }
 
-/* Responsive ultra pequeño */
-@media (max-width: 360px){
-    .grid-2{
-        grid-template-columns: 1fr;
-    }
+.full-width{
+    grid-column:1 / -1;
 }
 
 
@@ -255,12 +252,16 @@ h2{
         <a href="#" class="btn-card">Ver QR</a>
     </div>
 
+    <!-- Dress code full width -->
+    <div class="info-card full-width">
+        <div class="card-icon">👗</div>
+        <h3>Dress Code</h3>
+        <p>Vestimenta elegante – colores tierra y tonos naturales</p>
+        <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn-card">Ver inspiración</a>
+    </div>
+
 </div>
 
-
-      
-  </div>
-</div>
 
 <script>
 // Nombre por query
@@ -319,6 +320,7 @@ let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74
 </body>
 
 </html>
+
 
 
 
