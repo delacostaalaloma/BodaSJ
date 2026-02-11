@@ -107,6 +107,19 @@ h1{
 .btn-container{
     text-align:center;
 }
+  .qr-box {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 0 auto 25px;
+      width: fit-content;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .qr-box img {
+      width: 220px;
+      max-width: 100%;
+    }
 </style>
 </head>
 
@@ -125,7 +138,10 @@ h1{
                 El alojamiento es limitado, así que te recomendamos reservar con anticipación para asegurar tu espacio.
                 A continuacion encontraras el QR para hacer tu reserva.
             </p>
-            <img src="perfil_lugar.png" alt="QR perfil lugar">
+              <div class="qr-box">
+                <!-- Reemplaza con tu QR real -->
+                <img src="perfil_lugar.png" alt="QR perfil lugar">
+      </div>
         </div>
 
         <div class="info-box">
@@ -140,6 +156,7 @@ h1{
 
 </body>
 </html>
+
 
 
 
