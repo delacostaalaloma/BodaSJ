@@ -1,343 +1,329 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuestra Historia</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
 
-<!-- OpenGraph -->
-<meta property="og:title" content="Nuestra Historia 💍">
-<meta property="og:description" content="Estás invitado/a a vivir un momento único.">
-<meta property="og:image" content="https://delacostaalaloma.github.io/BodaSJ/logo.jpeg">
-<meta property="og:url" content="https://delacostaalaloma.github.io/BodaSJ/invitacion2.html">
-<meta property="og:type" content="website">
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Nuestra Historia 💍">
+    <meta property="og:description" content="Estás invitado/a a vivir un momento único.">
+    <meta property="og:image" content="https://delacostaalaloma.github.io/BodaSJ/logo.jpeg">
+    <meta property="og:url" content="https://delacostaalaloma.github.io/BodaSJ/invitacion2.html">
+    <meta property="og:type" content="website">
 
-<style>
-@font-face {
-    font-family: 'Earthgate';
-    /* Usamos el nombre exacto del archivo que subiste */
-    src: url('Earthgate DEMO.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  /* Fondo general en un tono crema suave que combine con las hojas */
-  background: #fdfdfb; 
-  color: #2f3e3a;
-}
+    <style>
+        @font-face {
+            font-family: 'Earthgate';
+            /* Usamos el nombre exacto del archivo que subiste */
+            src: url('Earthgate DEMO.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            /* Fondo general en un tono crema suave que combine con las hojas */
+            background: #fdfdfb;
+            color: #2f3e3a;
+        }
 
-.card {
-  max-width: 500px; /* Reducido para que parezca más una tarjeta física */
-  width: 100%;
-  border-radius: 20px;
-  padding: 80px 40px; /* Más padding arriba/abajo para no tapar las hojas */
-  box-shadow: 0 15px 45px rgba(0,0,0,0.08);
-  position: relative;
-  overflow: hidden;
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-  /* AQUÍ INTEGRAMOS TU IMAGEN */
-  background-image: url('https://delacostaalaloma.github.io/BodaSJ/fondo2.jpeg'); 
-  background-size: cover;
-  background-position: center;
-  background-color: white; /* Respaldo si falla la imagen */
-}
+        .card {
+            max-width: 500px;
+            /* Reducido para que parezca más una tarjeta física */
+            width: 100%;
+            border-radius: 20px;
+            padding: 80px 40px;
+            /* Más padding arriba/abajo para no tapar las hojas */
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
 
-
-/* Esto asegura que el contenido esté por encima del filtro */
-.card > * {
-  position: relative;
-  z-index: 2;
-}
-
-h1{
-  font-family:'Earthgate', serif !important;
-  font-size:3rem;
-  margin:10px 0;
-  color: #283316;
-}
-
-h2{
-  font-family:'Playfair Display',serif;
-  font-size:1.6rem;
-  margin-bottom:10px;
-}
-
-.date{
-  letter-spacing:2px;
-  margin-bottom:20px;
-}
-
-.quote{
-  font-style:italic;
-  margin:30px 0;
-  color:#5f7c74;
-}
-
-#nombre{
-  color:#7a9c8c;
-  font-weight:600;
-  font-size:1.3rem;
-}
-
-.section{
-  margin:35px 0;
-}
-
-.btn{
-  display:block;
-  text-decoration:none;
-  margin:12px 0;
-  padding:16px;
-  border-radius:14px;
-  font-weight:600;
-  background:#7a9c8c;
-  color:white;
-  transition:.3s;
-}
-
-.btn:hover{transform:scale(1.04)}
-.countdown{
-  display:flex;
-  justify-content:space-around;
-  margin-top:25px;
-}
-
-.time-box{
-  text-align:center;
-}
-
-.time-box span{
-  display:block;
-  font-size:1.4rem;
-  font-weight:700;
-}
-
-.footer{
-  margin-top:30px;
-  font-size:.8rem;
-  opacity:.6;
-}
-
-/* Contenedor general de las tarjetas */
-.section-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    max-width: 450px;
-    margin: 0 auto;
-}
-
-.info-card {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 15px; /* Reducido para que quepan 2 */
-    text-align: center;
-    border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-icon {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.info-card h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: #2d4d42;
-}
-
-.info-card p {
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.btn-card {
-    background-color: #7a843d;
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.grid-2{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:16px;
-}
-
-.full-width{
-    grid-column:1 / -1;
-}
+            /* AQUÍ INTEGRAMOS TU IMAGEN */
+            background-image: url('https://delacostaalaloma.github.io/BodaSJ/fondo2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-color: white;
+            /* Respaldo si falla la imagen */
+        }
 
 
-</style>
+        /* Esto asegura que el contenido esté por encima del filtro */
+        .card>* {
+            margin-top: 140px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Earthgate', serif !important;
+            font-size: 3rem;
+            margin: 10px 0;
+            color: #283316;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 30px 0;
+            color: #5f7c74;
+        }
+
+        #nombre {
+            color: #7a9c8c;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .section {
+            margin: 35px 0;
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            margin: 12px 0;
+            padding: 16px;
+            border-radius: 14px;
+            font-weight: 600;
+            background: #7a9c8c;
+            color: white;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.04)
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+        }
+
+        .time-box {
+            text-align: center;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: .8rem;
+            opacity: .6;
+        }
+
+        /* Contenedor general de las tarjetas */
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            /* Reducido para que quepan 2 */
+            text-align: center;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #2d4d42;
+        }
+
+        .info-card p {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .btn-card {
+            background-color: #7a843d;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="hero">
-  <div class="card">
-    <br><br>
-    <br><br>
-    <br>
-    <br>
-    <div class="date">22.05.2026</div>
-    <h1>Stefa & Juanpa</h1>
+    <div class="hero">
+        <div class="card">
+            <div class="date">22.05.2026</div>
+            <h1>Stefa & Juanpa</h1>
 
-    <div class="quote">“Cuando Dios está en el centro, el amor encuentra su camino.
-    Así comenzó nuestra historia, de forma inesperada, creciendo en unión y convirtiéndose en una familia llena de amor.
-    Hoy damos el “sí” más importante de nuestras vidas.”</div>
+            <div class="quote">“Cuando Dios está en el centro, el amor encuentra su camino.
+                Así comenzó nuestra historia, de forma inesperada, creciendo en unión y convirtiéndose en una familia
+                llena de amor.
+                Hoy damos el “sí” más importante de nuestras vidas.”</div>
 
-    <h2>Estás invitado/a</h2>
-    <div id="nombre">Invitado Especial</div>
-    <div id="cupos" style="margin-top:6px;font-weight:600;color:#5f7c74;"></div>
+            <h2>Estás invitado/a</h2>
+            <div id="nombre">Invitado Especial</div>
+            <div id="cupos" style="margin-top:6px;font-weight:600;color:#5f7c74;"></div>
 
-    <div class="section">
-      <h2>Cuenta regresiva</h2>
-      <div class="countdown">
-        <div class="time-box"><span id="d">0</span>días</div>
-        <div class="time-box"><span id="h">0</span>hs</div>
-        <div class="time-box"><span id="m">0</span>min</div>
-        <div class="time-box"><span id="s">0</span>seg</div>
-      </div>
-    </div>
+            <div class="section">
+                <h2>Cuenta regresiva</h2>
+                <div class="countdown">
+                    <div class="time-box"><span id="d">0</span>días</div>
+                    <div class="time-box"><span id="h">0</span>hs</div>
+                    <div class="time-box"><span id="m">0</span>min</div>
+                    <div class="time-box"><span id="s">0</span>seg</div>
+                </div>
+            </div>
 
-<div class="section-container grid-2">
+            <div class="section-container grid-2">
 
-    <div class="info-card">
-        <div class="card-icon">📍</div>
-        <h3>Lugar</h3>
-        <p>Cabaña Villa Sofía</p>
-        <a href="https://www.instagram.com/cabanavillasofia_/" class="btn-card">Ver ubicación</a>
-    </div>
+                <div class="info-card">
+                    <div class="card-icon">📍</div>
+                    <h3>Lugar</h3>
+                    <p>Cabaña Villa Sofía</p>
+                    <a href="https://www.instagram.com/cabanavillasofia_/" class="btn-card">Ver ubicación</a>
+                </div>
 
-    <div class="info-card">
-        <div class="card-icon">🎵</div>
-        <h3>Música</h3>
-        <p>Sugiere una canción</p>
-        <a href="#" class="btn-card">Sugerir canción</a>
-    </div>
+                <div class="info-card">
+                    <div class="card-icon">🎵</div>
+                    <h3>Música</h3>
+                    <p>Sugiere una canción</p>
+                    <a href="#" class="btn-card">Sugerir canción</a>
+                </div>
 
-    <div class="info-card">
-        <div class="card-icon">✅</div>
-        <h3>RSVP</h3>
-        <p>Confirma tu asistencia</p>
-        <a id="rsvpBtn" href="#" class="btn-card">Confirmar</a>
-    </div>
+                <div class="info-card">
+                    <div class="card-icon">✅</div>
+                    <h3>RSVP</h3>
+                    <p>Confirma tu asistencia</p>
+                    <a id="rsvpBtn" href="#" class="btn-card">Confirmar</a>
+                </div>
 
-    <div class="info-card">
-        <div class="card-icon">🎁</div>
-        <h3>Regalos</h3>
-        <p>Lluvia de sobres</p>
-        <a href="#" class="btn-card">Ver QR</a>
-    </div>
+                <div class="info-card">
+                    <div class="card-icon">🎁</div>
+                    <h3>Regalos</h3>
+                    <p>Lluvia de sobres</p>
+                    <a href="#" class="btn-card">Ver QR</a>
+                </div>
 
-    <!-- Dress code full width -->
-    <div class="info-card full-width">
-        <div class="card-icon">👗</div>
-        <h3>Dress Code</h3>
-        <p>Vestimenta elegante – colores tierra y tonos naturales</p>
-        <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn-card">Ver inspiración</a>
-    </div>
-
-</div>
-
-
-<script>
-// Nombre por query
-const params = new URLSearchParams(window.location.search);
-const nombre = params.get('nombre');
-const token = params.get('code');
-
-fetch('invitados.json')
-.then(r => r.json())
-.then(data => {
-
-  if(!token || !data[token]){
-    document.body.innerHTML = `
-      <div style="display:flex;align-items:center;justify-content:center;height:100vh;text-align:center;">
-        <div>
-          <h1>Invitación no válida</h1>
-          <p>Este acceso no está autorizado.</p>
+                <!-- Dress code full width -->
+                <div class="info-card full-width">
+                    <div class="card-icon">👗</div>
+                    <h3>Dress Code</h3>
+                    <p>Vestimenta elegante – colores tierra y tonos naturales</p>
+                    <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn-card">Ver inspiración</a>
+                </div>
+            </div>
         </div>
-      </div>`;
-    return;
-  }
+    </div>
+    <script>
+        // Nombre por query
+        const params = new URLSearchParams(window.location.search);
+        const nombre = params.get('nombre');
+        const token = params.get('code');
 
-  const invitado = data[token];
+        fetch('invitados.json')
+            .then(r => r.json())
+            .then(data => {
 
-  // Render
-  document.getElementById('nombre').innerText = invitado.nombre;
-  document.getElementById('cupos').innerText = `Cupos asignados: ${invitado.cupos} personas`;
+                if (!token || !data[token]) {
+                    document.body.innerHTML = `
+                     <div style="display:flex;align-items:center;justify-content:center;height:100vh;text-align:center;">
+                       <div>
+                         <h1>Invitacion no valida</h1>
+                         <p>Este acceso no está autorizado.</p>
+                       </div>
+                     </div>`;
+                    return;
+                }
+
+                const invitado = data[token];
+
+                // Render
+                document.getElementById('nombre').innerText = invitado.nombre;
+                document.getElementById('cupos').innerText = `Cupos asignados: ${invitado.cupos} personas`;
 
 
-// Countdown
-const fechaBoda = new Date('2026-05-22T17:00:00').getTime();
-setInterval(()=>{
-  const ahora = new Date().getTime();
-  const diff = fechaBoda - ahora;
+                // Countdown
+                const fechaBoda = new Date('2026-05-22T17:00:00').getTime();
+                setInterval(() => {
+                    const ahora = new Date().getTime();
+                    const diff = fechaBoda - ahora;
 
-  const d = Math.floor(diff / (1000*60*60*24));
-  const h = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
-  const m = Math.floor((diff % (1000*60*60))/(1000*60));
-  const s = Math.floor((diff % (1000*60))/1000);
+                    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const s = Math.floor((diff % (1000 * 60)) / 1000);
 
-  document.getElementById('d').innerText = d;
-  document.getElementById('h').innerText = h;
-  document.getElementById('m').innerText = m;
-  document.getElementById('s').innerText = s;
-},1000);
+                    document.getElementById('d').innerText = d;
+                    document.getElementById('h').innerText = h;
+                    document.getElementById('m').innerText = m;
+                    document.getElementById('s').innerText = s;
+                }, 1000);
 
-let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74xoHiW91AjYUPLaNXGT51dchTPw/viewform";
+                let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74xoHiW91AjYUPLaNXGT51dchTPw/viewform";
 
- document.getElementById('rsvpBtn').href =
-    formBase +
-    "?entry.1999824820=" + encodeURIComponent(invitado.nombre) +
-    "&entry.2084982047=" + invitado.cupos;
-});
-</script>
+                document.getElementById('rsvpBtn').href =
+                    formBase +
+                    "?entry.1999824820=" + encodeURIComponent(invitado.nombre) +
+                    "&entry.2084982047=" + invitado.cupos;
+            });
+    </script>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
