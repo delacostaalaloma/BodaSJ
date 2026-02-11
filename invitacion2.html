@@ -43,11 +43,14 @@
         }
 
         .card {
+         
             max-width: 500px;
-            /* Reducido para que parezca más una tarjeta física */
             width: 100%;
             border-radius: 20px;
-            padding: 80px 40px;
+            padding: 180px 40px 60px;  
+            /*        ↑     ↑      ↑
+            top   lados   bottom */
+
             /* Más padding arriba/abajo para no tapar las hojas */
             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
             position: relative;
@@ -56,15 +59,17 @@
             /* AQUÍ INTEGRAMOS TU IMAGEN */
             background-image: url('https://delacostaalaloma.github.io/BodaSJ/fondo2.jpeg');
             background-size: cover;
-            background-position: center;
+            background-position: top center;
             background-color: white;
             /* Respaldo si falla la imagen */
         }
 
+        .card {
+        padding-top: 200px;
+        }
 
         /* Esto asegura que el contenido esté por encima del filtro */
         .card>* {
-            margin-top: 140px;
             position: relative;
             z-index: 2;
         }
@@ -99,26 +104,6 @@
             font-size: 1.3rem;
         }
 
-        .section {
-            margin: 35px 0;
-        }
-
-        .btn {
-            display: block;
-            text-decoration: none;
-            margin: 12px 0;
-            padding: 16px;
-            border-radius: 14px;
-            font-weight: 600;
-            background: #7a9c8c;
-            color: white;
-            transition: .3s;
-        }
-
-        .btn:hover {
-            transform: scale(1.04)
-        }
-
         .countdown {
             display: flex;
             justify-content: space-around;
@@ -135,21 +120,17 @@
             font-weight: 700;
         }
 
-        .footer {
-            margin-top: 30px;
-            font-size: .8rem;
-            opacity: .6;
-        }
 
         /* Contenedor general de las tarjetas */
-        .section-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            padding: 20px;
-            max-width: 450px;
-            margin: 0 auto;
+        .section-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 20px;
+        max-width: 450px;
+        margin: 0 auto;
         }
+
 
         .info-card {
             background: rgba(255, 255, 255, 0.9);
@@ -192,11 +173,6 @@
             font-weight: bold;
         }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
 
         .full-width {
             grid-column: 1 / -1;
