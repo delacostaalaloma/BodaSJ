@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalos</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: #f5f6f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            max-width: 500px;
+            width: 100%;
+            border-radius: 20px;
+            padding: 180px 40px 60px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+
+            /* Fondo igual a invitación */
+            background-image: url('https://delacostaalaloma.github.io/BodaSJ/fondo2.jpeg');
+            background-size: cover;
+            background-position: top center;
+            background-color: white;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.85);
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+            color: #3b4b3f;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #6b7a6f;
+            margin-bottom: 30px;
+        }
+
+        .qr-box {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 0 auto 25px;
+            width: fit-content;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .qr-box img {
+            width: 220px;
+            max-width: 100%;
+        }
+
+        .bank-data {
+            font-size: 14px;
+            color: #4b5a50;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .bank-data strong {
+            color: #2f3f34;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 30px;
+            border: none;
+            background: #7a8539;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #6a7432;
+            transform: translateY(-2px);
+        }
+
+        .back {
+            margin-top: 30px;
+            display: inline-block;
+            font-size: 13px;
+            color: #7a8539;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="overlay"></div>
+
+        <div class="content">
+            <h1>Regalos</h1>
+            <div class="subtitle">Gracias por acompañarnos en este día tan especial 💛</div>
+
+            <div class="qr-box">
+                <!-- Reemplaza con tu QR real -->
+                <img src="qr-cuenta.png" alt="QR Cuenta bancaria">
+            </div>
+
+            <div class="bank-data">
+                <strong>Banco:</strong> XXXXX<br>
+                <strong>Titular:</strong> XXXXX<br>
+                <strong>Cuenta:</strong> XXXXX<br>
+                <strong>Tipo:</strong> Ahorros / Corriente
+            </div>
+
+            <div class="buttons">
+                <a href="qr-cuenta.png" download class="btn">Descargar QR</a>
+                <button class="btn" onclick="copyData()">Copiar datos</button>
+            </div>
+
+            <a href="invitacion2.html" class="back">← Volver a la invitación</a>
+        </div>
+    </div>
+
+    <script>
+        function copyData() {
+            const text = `Banco: XXXXX\nTitular: XXXXX\nCuenta: XXXXX\nTipo: Ahorros / Corriente`;
+            navigator.clipboard.writeText(text);
+            alert('Datos copiados al portapapeles');
+        }
+    </script>
+
+</body>
+</html>
