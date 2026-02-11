@@ -126,7 +126,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 16px;
-            padding: 20px;
             max-width: 450px;
             margin: 0 auto;
         }
@@ -178,34 +177,33 @@
             grid-column: 1 / -1;
         }
 
-      .audio-btn{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(122, 156, 140, 0.9);
-    color: white;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    cursor: pointer;
-    z-index: 9999;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transition: all .3s ease;
-}
+        .audio-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(122, 156, 140, 0.9);
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transition: all .3s ease;
+        }
 
-.audio-btn:hover{
-    transform: scale(1.08);
-    background:#6b8f80;
-}
+        .audio-btn:hover {
+            transform: scale(1.08);
+            background: #6b8f80;
+        }
 
-.audio-btn.muted{
-    background: rgba(150,150,150,0.8);
-}
-
+        .audio-btn.muted {
+            background: rgba(150, 150, 150, 0.8);
+        }
     </style>
 </head>
 
@@ -226,10 +224,9 @@
 
             <div class="quote">“Cuando Dios está en el centro, el amor encuentra su camino.
                 Así comenzó nuestra historia, de forma inesperada, creciendo en unión y convirtiéndose en una familia
-                llena de amor.
-                Hoy damos el “sí” más importante de nuestras vidas.”</div>
+                llena de amor.”</div>
 
-            <h2>Estás invitado/a</h2>
+            <h2>invitado/s</h2>
             <div id="nombre">Invitado Especial</div>
             <div id="cupos" style="margin-top:6px;font-weight:600;color:#5f7c74;"></div>
 
@@ -272,13 +269,18 @@
                     <p>Lluvia de sobres</p>
                     <a href="#" class="btn-card">Ver QR</a>
                 </div>
-
-                <!-- Dress code full width -->
-                <div class="info-card full-width">
+                <div class="info-card">
                     <div class="card-icon">👗</div>
                     <h3>Dress Code</h3>
                     <p>Vestimenta elegante – colores tierra y tonos naturales</p>
                     <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn-card">Ver inspiración</a>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon"></div>
+                    <h3>Tips y Notas</h3>
+                    <p>Informacion importante para tener en cuenta </p>
+                    <a href="" class="btn-card">+ INFO</a>
                 </div>
             </div>
         </div>
@@ -336,39 +338,33 @@
                     "&entry.2084982047=" + invitado.cupos;
             });
 
-      const music = document.getElementById('bg-music');
-const btn = document.getElementById('audio-control');
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('audio-control');
 
-// empieza en mute por compatibilidad móvil
-music.volume = 0.6;
-music.muted = false;
-
-btn.addEventListener('click', () => {
-    if (music.muted) {
+        // empieza en mute por compatibilidad móvil
+        music.volume = 0.6;
         music.muted = false;
-        btn.innerText = '🔊';
-        btn.classList.remove('muted');
-    } else {
-        music.muted = true;
-        btn.innerText = '🔇';
-        btn.classList.add('muted');
-    }
-});
 
-    document.addEventListener('click', () => {
-    if (music.paused) {
-        music.play().catch(()=>{});
-    }
-},{ once:true });
+        btn.addEventListener('click', () => {
+            if (music.muted) {
+                music.muted = false;
+                btn.innerText = '🔊';
+                btn.classList.remove('muted');
+            } else {
+                music.muted = true;
+                btn.innerText = '🔇';
+                btn.classList.add('muted');
+            }
+        });
+
+        document.addEventListener('click', () => {
+            if (music.paused) {
+                music.play().catch(() => { });
+            }
+        }, { once: true });
 
     </script>
 
 </body>
 
 </html>
-
-
-
-
-
-
