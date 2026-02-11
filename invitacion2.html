@@ -178,29 +178,44 @@
             grid-column: 1 / -1;
         }
 
-        .music-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.85);
-            border: 1px solid #ddd;
-            border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            color: var(--verde-oscuro);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-            z-index: 999;
-        }
+      .audio-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(122, 156, 140, 0.9);
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: all .3s ease;
+}
+
+.audio-btn:hover{
+    transform: scale(1.08);
+    background:#6b8f80;
+}
+
+.audio-btn.muted{
+    background: rgba(150,150,150,0.8);
+}
+
     </style>
 </head>
 
-<audio id="bgMusic" loop>
-    <source src="yotetodo.mp4" type="audio/mpeg">
+<audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
 </audio>
 
-<button id="musicToggle" class="music-btn">🔇</button>
+<div id="audio-control" class="audio-btn muted">🔇</div>
+
 
 <body>
 
@@ -321,29 +336,29 @@
                     "&entry.2084982047=" + invitado.cupos;
             });
 
-        const music = document.getElementById("bgMusic");
-        const toggle = document.getElementById("musicToggle");
+      const music = document.getElementById('bg-music');
+const btn = document.getElementById('audio-control');
 
-        // autoplay suave al primer click
-        document.body.addEventListener("click", () => {
-            if (music.paused) {
-                music.volume = 0.3;
-                music.play().catch(() => { });
-            }
-        }, { once: true });
+// empieza en mute por compatibilidad móvil
+music.volume = 0.6;
+music.muted = false;
 
-        toggle.addEventListener("click", () => {
-            if (music.muted) {
-                music.muted = false;
-                toggle.innerText = "🔊";
-            } else {
-                music.muted = true;
-                toggle.innerText = "🔇";
-            }
-        });
+btn.addEventListener('click', () => {
+    if (music.muted) {
+        music.muted = false;
+        btn.innerText = '🔊';
+        btn.classList.remove('muted');
+    } else {
+        music.muted = true;
+        btn.innerText = '🔇';
+        btn.classList.add('muted');
+    }
+});
+
     </script>
 
 </body>
 
 </html>
+
 
