@@ -196,9 +196,13 @@
         }
 
         .card-icon {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
+            width: 28px;
+            height: 28px;
+            margin: 0 auto 8px;
+            stroke: var(--verde);
+            fill: none;
         }
+
 
         .info-card h3 {
             font-size: 1rem;
@@ -260,6 +264,12 @@
         * {
             box-sizing: border-box;
         }
+
+        :root {
+            --verde: #7a9c8c;
+            --verde-oscuro: #2d4d42;
+            --beige: #fdfdfb;
+        }
     </style>
 </head>
 
@@ -309,7 +319,12 @@
                 </div>
 
                 <div class="info-card">
-                    <div class="card-icon">🎵</div>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21s-6-5.33-6-10a6 6 0 0 1 12 0c0 4.67-6 10-6 10z" stroke-width="1.8" />
+                            <circle cx="12" cy="11" r="2.5" stroke-width="1.8" />
+                        </svg>
+                    </div>
                     <h3>Música</h3>
                     <p>Sugiere una canción</p>
                     <a href="#" class="btn-card">Sugerir canción</a>
@@ -427,5 +442,3 @@
 </body>
 
 </html>
-
-
