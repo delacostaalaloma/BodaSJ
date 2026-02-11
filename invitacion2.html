@@ -91,23 +91,45 @@ h2{
   font-size:1.3rem;
 }
 
-.section{
-  margin:35px 0;
+/* Estilo actualizado para botones tipo "Sugerir Canción" */
+.btn {
+    display: block;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 14px 20px;
+    
+    /* Bordes muy redondeados (Pill style) */
+    border-radius: 30px; 
+    
+    /* Tipografía */
+    font-weight: 700;
+    text-transform: uppercase; /* Para que se vea profesional como el ejemplo */
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    
+    /* Colores basados en la imagen de referencia */
+    background-color: #7a843d; /* Verde oliva de la imagen */
+    color: #ffffff;
+    
+    /* Efectos */
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.btn{
-  display:block;
-  text-decoration:none;
-  margin:12px 0;
-  padding:16px;
-  border-radius:14px;
-  font-weight:600;
-  background:#7a9c8c;
-  color:white;
-  transition:.3s;
+/* Efecto al pasar el mouse */
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: #636b32; /* Un tono más oscuro al presionar */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover{transform:scale(1.04)}
+/* Ajuste para el contenedor de los botones */
+.section {
+    padding: 10px 20px;
+    margin-top: 20px;
+}
 
 .countdown{
   display:flex;
@@ -235,6 +257,7 @@ let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74
 </body>
 
 </html>
+
 
 
 
