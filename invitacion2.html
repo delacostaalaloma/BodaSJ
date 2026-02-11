@@ -180,6 +180,20 @@ h2{
     font-weight: bold;
 }
 
+.grid-2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;  /* 2 columnas */
+    gap:16px;
+}
+
+/* Responsive ultra pequeño */
+@media (max-width: 360px){
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+}
+
+
 </style>
 </head>
 <body>
@@ -211,7 +225,7 @@ h2{
       </div>
     </div>
 
-<div class="section-container">
+<div class="section-container grid-2">
 
     <div class="info-card">
         <div class="card-icon">📍</div>
@@ -242,6 +256,7 @@ h2{
     </div>
 
 </div>
+
 
       
   </div>
@@ -304,6 +319,7 @@ let formBase = "https://docs.google.com/forms/d/e/1FAIpQLSd4yOIAlAefsQ-voGlSio74
 </body>
 
 </html>
+
 
 
 
