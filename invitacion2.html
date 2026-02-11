@@ -43,11 +43,11 @@
         }
 
         .card {
-         
+
             max-width: 500px;
             width: 100%;
             border-radius: 20px;
-            padding: 180px 40px 60px;  
+            padding: 180px 40px 60px;
             /*        ↑     ↑      ↑
             top   lados   bottom */
 
@@ -65,7 +65,7 @@
         }
 
         .card {
-        padding-top: 250px;
+            padding-top: 250px;
         }
 
         /* Esto asegura que el contenido esté por encima del filtro */
@@ -122,13 +122,13 @@
 
 
         /* Contenedor general de las tarjetas */
-        .section-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        padding: 20px;
-        max-width: 450px;
-        margin: 0 auto;
+        .section-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 20px;
+            max-width: 450px;
+            margin: 0 auto;
         }
 
 
@@ -177,8 +177,30 @@
         .full-width {
             grid-column: 1 / -1;
         }
+
+        .music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--verde-oscuro);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            z-index: 999;
+        }
     </style>
 </head>
+
+<audio id="bgMusic" loop>
+    <source src="yotetodo.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-btn">🔇</button>
 
 <body>
 
@@ -298,10 +320,29 @@
                     "?entry.1999824820=" + encodeURIComponent(invitado.nombre) +
                     "&entry.2084982047=" + invitado.cupos;
             });
+
+        const music = document.getElementById("bgMusic");
+        const toggle = document.getElementById("musicToggle");
+
+        // autoplay suave al primer click
+        document.body.addEventListener("click", () => {
+            if (music.paused) {
+                music.volume = 0.3;
+                music.play().catch(() => { });
+            }
+        }, { once: true });
+
+        toggle.addEventListener("click", () => {
+            if (music.muted) {
+                music.muted = false;
+                toggle.innerText = "🔊";
+            } else {
+                music.muted = true;
+                toggle.innerText = "🔇";
+            }
+        });
     </script>
 
 </body>
 
 </html>
-
-
