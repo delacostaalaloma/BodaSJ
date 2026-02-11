@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tips y Notas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@font-face {
+    font-family: 'TIMESS';
+    src: url('TIMESS__.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'Wedding Style';
+    src: url('Wedding%20Style.otf') format('opentype');
+}
+
+body{
+    margin:0;
+    font-family:'TIMESS', serif;
+    background:#fdfdfb;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    max-width:520px;
+    width:100%;
+    border-radius:22px;
+    padding:220px 35px 50px;
+    position:relative;
+    overflow:hidden;
+    background-image:url('https://delacostaalaloma.github.io/BodaSJ/fondo2.jpeg');
+    background-size:cover;
+    background-position:top center;
+    box-shadow:0 15px 45px rgba(0,0,0,0.1);
+}
+
+/* overlay suave */
+.card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.65);
+    z-index:1;
+}
+
+.card *{
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    font-family:'Wedding Style', serif;
+    text-align:center;
+    font-size:2.8rem;
+    margin-bottom:10px;
+    color:#283316;
+}
+
+.subtitle{
+    text-align:center;
+    color:#4b5f3a;
+    margin-bottom:30px;
+}
+
+.info-box{
+    background:rgba(255,255,255,0.85);
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.05);
+}
+
+.info-box h3{
+    margin:0 0 8px;
+    font-size:1.1rem;
+    color:#2d4d42;
+}
+
+.info-box p{
+    margin:0;
+    font-size:0.95rem;
+    color:#555;
+    line-height:1.4;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    text-align:center;
+    background:#7a843d;
+    color:white;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:0.9rem;
+}
+
+.btn-container{
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="card">
+
+        <h1>Tips y Notas</h1>
+        <div class="subtitle">Información importante para tener en cuenta</div>
+
+        <div class="info-box">
+            <h3>📞 Contacto directo del hospedaje</h3>
+            <p>
+                Para cualquier información adicional sobre el lugar, puedes comunicarte directamente con el hospedaje.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h3>👶 Niños</h3>
+            <p>
+                Amamos los niños 🤍, pero por logística y comodidad del evento, deben quedarse en casa.
+                Queremos que disfrutes la celebración con total tranquilidad.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h3>📍 Ubicación</h3>
+            <p>
+                El lugar se encuentra retirado de la ciudad, por lo cual es importante que lleves todo lo que necesites
+                con anticipación.
+            </p>
+        </div>
+
+        <div class="btn-container">
+            <a href="invitacion2.html" class="btn">Volver a la invitación</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
