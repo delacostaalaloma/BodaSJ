@@ -25,7 +25,7 @@
             font-style: normal;
         }
 
-         @font-face {
+        @font-face {
             font-family: 'Easter Onion';
             /* Usamos el nombre exacto del archivo que subiste */
             src: url('Easter%20Onion.otf') format('opentype');
@@ -33,7 +33,7 @@
             font-style: normal;
         }
 
-          @font-face {
+        @font-face {
             font-family: 'Wedding Style';
             /* Usamos el nombre exacto del archivo que subiste */
             src: url('Wedding%20Style.otf') format('opentype');
@@ -112,6 +112,13 @@
             color: #2d4d42;
         }
 
+        h4 {
+            font-family: 'TIMESS', serif !important;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #2d4d42;
+        }
+
         .date {
             font-family: 'TIMESS', serif !important;
             letter-spacing: 2px;
@@ -125,11 +132,17 @@
             color: #2d4d42;
         }
 
+        #cupos {
+            font-family: 'TIMESS', serif !important;
+            margin: 30px 0;
+            color: #2d4d42;
+        }
+
         #nombre {
             font-family: 'Easter Onion', serif !important;
-            color: #435525;
+            color: #637c36;
             font-weight: 600;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
         }
 
         .countdown {
@@ -235,7 +248,7 @@
         }
 
         * {
-              box-sizing: border-box;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -252,16 +265,17 @@
 
     <div class="hero">
         <div class="card">
-            <div class="date">22.05.2026</div>
-            <h1>Stefa & Juanpa</h1>
 
+            <h1>Stefa & Juanpa</h1>
+            <div class="date">22.05.2026</div>
+            
             <div class="quote">“Cuando Dios está en el centro, el amor encuentra su camino.
                 Así comenzó nuestra historia, de forma inesperada, creciendo en unión y convirtiéndose en una familia
                 llena de amor.”</div>
 
-            <h2>Invitado/s</h2>
+            <h4>Invitado/s</h4>
             <div id="nombre">Invitado Especial</div>
-            <div id="cupos" style="margin-top:6px;font-weight:600;color:#5f7c74;"></div>
+            <div id="cupos"></div>
 
             <div class="section">
                 <h2>Cuenta regresiva</h2>
@@ -343,7 +357,7 @@
 
                 // Render
                 document.getElementById('nombre').innerText = invitado.nombre;
-                document.getElementById('cupos').innerText = `Cupos asignados: ${invitado.cupos} personas`;
+                document.getElementById('cupos').innerText = `<b>Cupo/s:<b/> ${invitado.cupos}`;
 
 
                 // Countdown
@@ -401,4 +415,3 @@
 </body>
 
 </html>
-
