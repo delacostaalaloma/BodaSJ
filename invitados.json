@@ -3,12 +3,12 @@
   "Q7L9P2": {"nombre":"Juan Julio, Caro y Emilio","cupos":3},
   "M2X9A7": {"nombre":"Lukas y Meli","cupos":2},
   "J1P8ZQ": {"nombre":"Juancho","cupos":1},
-  "K7A3M2": {"nombre":"Jorge Mario","cupos":3},
+  "K7A3M2": {"nombre":"Jorge Mario","cupos":2},
   "E9X2LQ": {"nombre":"Elena","cupos":1},
   "C2M9QX": {"nombre":"Juan Carlos","cupos":1},
   "V7P2A9": {"nombre":"Viviana","cupos":1},
-  "F3X9Q2": {"nombre":"Majo y familia","cupos":3},
-  "D9M2XQ": {"nombre":"JD","cupos":1},
+  "F3X9Q2": {"nombre":"Majo y Familia","cupos":3},
+  "D9M2XQ": {"nombre":"Jd","cupos":1},
   "G7A2P9": {"nombre":"Greta","cupos":1},
   "N2X9Q7": {"nombre":"Nico Uejbe","cupos":1},
   "H9P2X7": {"nombre":"Andrea Hernandez","cupos":1},
@@ -22,7 +22,7 @@
   "M9X2QP": {"nombre":"Rosario Leotta e Famiglia","cupos":3},
   "C9Q2MX": {"nombre":"Carlos Mario y Adriana","cupos":2},
   "B2M9QX": {"nombre":"Alfonso y Zoyla","cupos":2},
-  "M2Q9PX": {"nombre":"Mayllol","cupos":2},
+  "M2Q9PX": {"nombre":"Mayllol","cupos":1},
   "F9X2QM": {"nombre":"Batista","cupos":2},
   "S9P2XM": {"nombre":"Sergio","cupos":1},
   "B9XQ2M": {"nombre":"Bryan","cupos":2},
@@ -41,8 +41,8 @@
   "S9X2PM": {"nombre":"Santiago Londoño","cupos":2},
   "M7X9QP": {"nombre":"Mateo Giraldo","cupos":2},
   "M9Q2XP": {"nombre":"Mauricio Miranda","cupos":2},
-  "A7X2PM": {"nombre":"Alex Galindo","cupos":1},
-  "C2X9PM": {"nombre":"Cristian Galindo","cupos":1},
+  "A7X2PM": {"nombre":"Lale","cupos":1},
+  "C2X9PM": {"nombre":"Cristian","cupos":1},
   "A9X2PM": {"nombre":"Ana Salinas","cupos":1},
   "M2X9QP": {"nombre":"Maria Clara Salinas","cupos":1},
   "D9X2PM": {"nombre":"Danilo y Lucía","cupos":2},
@@ -62,4 +62,5 @@
   "H3R6VM": {"nombre":"Silvia Mesa","cupos":1},
   "G4S7RJ": {"nombre":"Antonio Brieva","cupos":1}
 }
+
 
