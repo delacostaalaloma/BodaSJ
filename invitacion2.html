@@ -141,58 +141,46 @@ h2{
     margin: 0 auto;
 }
 
-/* Diseño de la Card Individual */
 .info-card {
-    background: #fdfdfd; /* Gris muy suave casi blanco */
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 15px; /* Reducido para que quepan 2 */
     text-align: center;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
 }
 
 .info-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #2d4d42; /* Verde oscuro */
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #2d4d42;
 }
 
 .info-card p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #666;
-    margin-bottom: 20px;
-    line-height: 1.4;
+    margin-bottom: 15px;
 }
 
-/* El botón estilo "Sugerir Canción" */
 .btn-card {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #7a843d; /* Verde oliva de tu referencia */
+    background-color: #7a843d;
     color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(122, 132, 61, 0.2);
+    font-weight: bold;
 }
 
-.btn-card:hover {
-    background-color: #636b32;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
 </style>
 
 </style>
@@ -226,40 +214,43 @@ h2{
       </div>
     </div>
 
-<div class="section-container">
-    <div class="info-card">
-        <div class="card-icon">📍</div>
-        <h3>El Lugar</h3>
-        <p>Acompáñanos a celebrar en Cabaña Villa Sofía.</p>
-        <a href="https://www.instagram.com/cabanavillasofia_?igsh=MjBicjlwZjF6bG8=" class="btn-card">Ver Ubicación</a>
-    </div>
+<div class="container mt-4">
+    <div class="row g-3"> <div class="col-6 col-md-6">
+            <div class="info-card h-100">
+                <div class="card-icon">📍</div>
+                <h3>Lugar</h3>
+                <p>Cabaña Villa Sofía</p>
+                <a href="https://www.instagram.com/cabanavillasofia_/" class="btn-card">Ver</a>
+            </div>
+        </div>
 
-    <div class="info-card">
-        <div class="card-icon">🎵</div>
-        <h3>Música</h3>
-        <p>¿Cuál es la canción que no debe faltar en la fiesta?</p>
-        <a href="https://open.spotify.com/playlist/3CoZEC942rXGRCbBPkVsSN?si=36826c3be6ac48d7" target="_blank" class="btn-card">Sugerir Canción</a>
-    </div>
+        <div class="col-6 col-md-6">
+            <div class="info-card h-100">
+                <div class="card-icon">🎵</div>
+                <h3>Música</h3>
+                <p>Sugiere una canción</p>
+                <a href="#" class="btn-card">Sugerir</a>
+            </div>
+        </div>
 
-    <div class="info-card">
-        <div class="card-icon">✅</div>
-        <h3>Confirmación</h3>
-        <p>Por favor, confirma tu asistencia antes del evento.</p>
-        <a id="rsvpBtn" href="#" class="btn-card">Confirmar Asistencia</a>
-    </div>
+        <div class="col-6 col-md-6">
+            <div class="info-card h-100">
+                <div class="card-icon">✅</div>
+                <h3>RSVP</h3>
+                <p>Confirma aquí</p>
+                <a href="#" class="btn-card">Confirmar</a>
+            </div>
+        </div>
 
-    <div class="info-card">
-        <div class="card-icon">👗</div>
-        <h3>Dress Code</h3>
-        <p>Conoce el código de vestimenta para este día especial.</p>
-        <a href="https://entreaarepacyayeye.netlify.app/dresscode" class="btn-card">Ver Detalles</a>
-    </div>
+        <div class="col-6 col-md-6">
+            <div class="info-card h-100">
+                <div class="card-icon">🎁</div>
+                <h3>Regalos</h3>
+                <p>Lluvia de sobres</p>
+                <a href="#" class="btn-card">Ver QR</a>
+            </div>
+        </div>
 
-    <div class="info-card">
-        <div class="card-icon">🎁</div>
-        <h3>Lluvia de Sobres</h3>
-        <p>Tu presencia es nuestro mejor regalo, pero si deseas darnos un detalle...</p>
-        <a href="https://entreaarepacyayeye.netlify.app/regalos" class="btn-card">Ver Información</a>
     </div>
 </div>
       
