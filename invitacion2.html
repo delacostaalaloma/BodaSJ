@@ -355,11 +355,18 @@ btn.addEventListener('click', () => {
     }
 });
 
+    document.addEventListener('click', () => {
+    if (music.paused) {
+        music.play().catch(()=>{});
+    }
+},{ once:true });
+
     </script>
 
 </body>
 
 </html>
+
 
 
 
