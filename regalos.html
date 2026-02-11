@@ -6,9 +6,21 @@
     <title>Regalos</title>
 
     <style>
+
+
+        @font-face {
+            font-family: 'TIMESS';
+            /* Usamos el nombre exacto del archivo que subiste */
+            src: url('TIMESS__.ttf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
+            
             box-sizing: border-box;
-            font-family: 'Georgia', serif;
+            font-family: 'TIMESS', serif;
+            color: #2d4d42;
         }
 
         body {
@@ -133,7 +145,7 @@
 
         <div class="content">
             <h1>Regalos</h1>
-            <div class="subtitle">Gracias por acompañarnos en este día tan especial 💛</div>
+            <div class="subtitle">Gracias por acompañarnos en este día tan especial</div>
 
             <div class="qr-box">
                 <!-- Reemplaza con tu QR real -->
@@ -141,18 +153,16 @@
             </div>
 
             <div class="bank-data">
-                <strong>Banco:</strong> XXXXX<br>
-                <strong>Titular:</strong> XXXXX<br>
-                <strong>Cuenta:</strong> XXXXX<br>
-                <strong>Tipo:</strong> Ahorros / Corriente
+                <strong>Banco:</strong> Bancolombia<br>
+                <strong>Titular:</strong> Juan Pablo Alzate Zuleta<br>
+                <strong>Cuenta:</strong> 23011410987<br>
+                <strong>Tipo:</strong> Ahorros
             </div>
 
             <div class="buttons">
                 <a href="qr-cuenta.png" download class="btn">Descargar QR</a>
                 <button class="btn" onclick="copyData()">Copiar datos</button>
             </div>
-
-            <a href="invitacion2.html" class="back">← Volver a la invitación</a>
         </div>
     </div>
 
