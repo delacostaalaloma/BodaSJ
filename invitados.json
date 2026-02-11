@@ -53,7 +53,7 @@
   "J9Q2XM": {"nombre":"Juan Diego Villegas","cupos":2},
   "L9Q2XM": {"nombre":"Lina Martinez","cupos":1},
   "L7QX2P": {"nombre":"Liseth Martinez","cupos":1},
-  "L2X9QP": {"nombre":"Laura Matinez","cupos":1},
+  "L2X9QP": {"nombre":"Laura Martinez","cupos":1},
   "JX9Q2M": {"nombre":"Juan Carlos Diaz","cupos":2},
   "R9Q2XM": {"nombre":"Rau","cupos":1},
   "R2X9QM": {"nombre":"Rafa","cupos":1},
@@ -62,5 +62,6 @@
   "H3R6VM": {"nombre":"Silvia Mesa","cupos":1},
   "G4S7RJ": {"nombre":"Antonio Brieva","cupos":1}
 }
+
 
 
